@@ -22,7 +22,7 @@ export class PokemonService {
    */
   getPokemon(): Observable<PokeAPI> {
     return this.http
-      .get<PokeAPI>(`${this.pokeAPI}?limit=151`)
+      .get<PokeAPI>(`${this.pokeAPI}?offset=151&limit=151`)
       .pipe(catchError(this._handleError));
   }
 
